@@ -24,7 +24,7 @@ class ViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // segueから遷移先のResultViewControllerを取得する
-        var resultViewController = segue.destination as! ResultViewController
+        let resultViewController = segue.destination as! ResultViewController
     
         resultViewController.text1 = textField1.text
         
