@@ -10,8 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var name : UITextField!
-    var nameString = ""
+    @IBOutlet weak var textField1 : UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,9 +24,9 @@ class ViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // segueから遷移先のResultViewControllerを取得する
-        let resultViewController:ResultViewController = segue.destination as! ResultViewController
+        var resultViewController = segue.destination as! ResultViewController
     
-        resultViewController.text = name!
+        resultViewController.text1 = textField1.text
         
     }
     
